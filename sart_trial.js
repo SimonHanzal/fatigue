@@ -1,7 +1,7 @@
 	/* METADATA */
 	
 	var timeline = [];
-	var no_trials = 1;
+	var no_trials = 57;
 
     /* WELCOME */
     
