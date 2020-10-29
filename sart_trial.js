@@ -7,7 +7,7 @@
     
 	var welcome = {
       type: "html-keyboard-response",
-      stimulus: '<div style = "font-size:22px;">You are now going to start a trial session for the experiment. Press any key to begin.</div>'
+      stimulus: '<div style = "font-size:22px;">You are now going to start a trial session for the experiment. Click this text, then press any key to begin.</div>'
     };
     timeline.push(welcome);
 
