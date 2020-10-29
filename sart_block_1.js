@@ -21,9 +21,9 @@
 				"<br>" +
 				'<div style = "font-size:19px;">If it is any other number between <strong>1-2</strong> or <strong>4-9</strong>, press the <strong>Space Bar</strong> as fast as you can.</div>' +
 				"<br>" +
-				'<div style = "font-size:19px;">Make sure the experiment is still in an active window. Try to balance speed and accuracy in your responses. </div>'+
+				'<div style = "font-size:19px;">Make sure the experiment is still in an active window. Ensure this by not clicking outside of the browser.</div>'+
 				"<br>" +
-				'<div style = "font-size:19px;">If the task seems difficult, do not worry, that is a part of the experiment.</div>' +
+				'<div style = "font-size:19px;">Try to balance speed and accuracy in your responses. If the task seems difficult, do not worry, that is a part of the experiment.</div>' +
 				"<br>" +	
 				'<div style = "font-size:19px;">Press any key to start.</div>',
       post_trial_gap: 2000
