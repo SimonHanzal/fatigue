@@ -146,7 +146,7 @@
 		var sd4 = Math.sqrt(sd3);
 		var deviation_1 = Math.round(sd4*100)/100;
 			
-			return '<div style = "font-size:22px;">Press any key to continue to the second part of the experiment.</div>';
+			return '<div style = "font-size:22px;">Press any key to continue.</div>';
 		}
 	};
 	timeline.push(debrief_block);
