@@ -1,13 +1,13 @@
 	/* METADATA */
 	
 	var timeline = [];
-	var no_trials = 27;
+	var no_trials = 13;
 
     /* WELCOME */
     
 	var welcome = {
       type: "html-keyboard-response",
-      stimulus: '<div style = "font-size:22px;">You are now going to start the experiment. Click this text, then press any key to continue. </div>'
+      stimulus: '<div style = "font-size:22px;">You are now going to start the next experimental block. Click this text, then press any key to continue. </div>'
     };
     timeline.push(welcome);
 
