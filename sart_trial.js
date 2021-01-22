@@ -1,7 +1,7 @@
 	/* METADATA */
 	
 	var timeline = [];
-	var no_trials = 3;
+	var no_trials = 4;
 
     /* WELCOME */
     
@@ -105,8 +105,8 @@
 		/* ANALYTIC CALCULATIONS */
 		
 		var accuracy_p = Math.round(correct_trials.count() / trials.count() * 10000) / 100;
-		var accuracy_go = correct_go_p / (correct_go_p + incorrect_go_p);
-		var accuracy_nogo = correct_no_go_p / (correct_no_go_p + incorrect_no_go_p);
+		var accuracy_go = Math.round(correct_go_p / (correct_go_p + incorrect_go_p) * 10000) / 100;
+		var accuracy_nogo = Math.round(correct_no_go_p / (correct_no_go_p + incorrect_no_go_p) * 10000) / 100;
 		
 		var minimum_p = Math.round(correct_go_trials.select('rt').min());
 		var maximum_p = Math.round(correct_go_trials.select('rt').max());
@@ -156,6 +156,7 @@
 					"<br>" +
 					'<div style = "font-size:19px;"> Your accuracy when you were supposed to press the spacebar for numbers was '+accuracy_go+'% and when you were supposed not to press anyhintg was '+accuracy_nogo+'%. </div>'+
 					"<br>" +
+					'<div style = "font-size:19px;"> <b> Please, make sure to continue only if your getting at least some correct responses. </b> </div>'+
 					"<br>" +
 					'<div style = "font-size:19px;">Now, press any key to continue to the recorded part of the experiment.</div>';
 		}
