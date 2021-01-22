@@ -1,7 +1,7 @@
 	/* METADATA */
 	
 	var timeline = [];
-	var no_trials = 2;
+	var no_trials = 3;
 
     /* WELCOME */
     
@@ -105,6 +105,8 @@
 		/* ANALYTIC CALCULATIONS */
 		
 		var accuracy_p = Math.round(correct_trials.count() / trials.count() * 10000) / 100;
+		var accuracy_go = correct_go_p / (correct_go_p + incorrect_go_p);
+		var accuracy_nogo = correct_no_go_p / (correct_no_go_p + incorrect_no_go_p);
 		
 		var minimum_p = Math.round(correct_go_trials.select('rt').min());
 		var maximum_p = Math.round(correct_go_trials.select('rt').max());
@@ -148,11 +150,12 @@
 			
 			return  '<div style = "font-size:22px;">Congratulations, you have finished the trial session!</div>'+
 					"<br>" +
-					'<div style = "font-size:19px;">You can check if you got the expected responses:</div>'+
-					"<br>" +
-					'<div style = "font-size:19px;"> Your accuracy was '+accuracy_p+'%.</div>'+
+					'<div style = "font-size:19px;">Please, check if you got the expected responses:</div>'+
 					"<br>" +
 					'<div style = "font-size:19px;">You missed '+incorrect_go_p+' of the numbers (1, 2, 4, 5, 6, 7, 8, 9) and incorrectly reacted  '+incorrect_no_go_p+'x  to number 3.</div>'+
+					"<br>" +
+					'<div style = "font-size:19px;"> Your accuracy when you were supposed to press the spacebar for numbers was '+accuracy_go+'% and when you were supposed not to press anyhintg was '+accuracy_nogo+'%. </div>'+
+					"<br>" +
 					"<br>" +
 					'<div style = "font-size:19px;">Now, press any key to continue to the recorded part of the experiment.</div>';
 		}
