@@ -154,7 +154,7 @@
 					"<br>" +
 					'<div style = "font-size:19px;">You missed '+incorrect_go_p+' of the numbers (1, 2, 4, 5, 6, 7, 8, 9) and incorrectly reacted  '+incorrect_no_go_p+'x  to number 3.</div>'+
 					"<br>" +
-					'<div style = "font-size:19px;"> Your accuracy when you were supposed to press the spacebar was '+accuracy_go+'% and when you were supposed not to press anyhintg was '+accuracy_nogo+'%. </div>'+
+					'<div style = "font-size:19px;"> Your accuracy when you were supposed to press the spacebar was '+accuracy_go+'% and when you were supposed not to press anything was '+accuracy_nogo+'%. </div>'+
 					"<br>" +
 					'<div style = "font-size:19px;"> <b> To receive a payment you must consistently show at least some correct responses to all of the numbers. </b> </div>'+
 					"<br>" +
