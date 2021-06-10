@@ -98,7 +98,7 @@
 		var correct_go_trials = correct_trials.filter({three: false});
 
 		var correct_no_go_p = correct_relevant.count();
-		var incorrect_no_go_p = no_trials * 1 - correct_relevant.count();
+		var incorrect_no_go_p = no_trials * 2 - correct_relevant.count();
 		var correct_go_p = correct_trials.count() - correct_no_go_p;
 		var incorrect_go_p = no_trials * 8 - correct_go_p;
 		
