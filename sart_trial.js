@@ -59,10 +59,6 @@
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
       stimulus_duration: 250,
-      on_load: function() {
-      alert('Hello');
-      //setTimeout(function () => { alert("Hello") }, 250)
-      },
       trial_duration: 2749,
       response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
@@ -80,6 +76,10 @@
 		  data.go = 2;
 	       }
 	},
+      on_start: function() {
+      alert('Hello');
+      //setTimeout(function () => { alert("Hello") }, 250)
+      }
     }
 
     var test_procedure = {
