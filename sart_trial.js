@@ -17,9 +17,9 @@
       type: "html-keyboard-response",
       stimulus: '<div style = "font-size:22px;"><strong>Instructions:</strong></div>' +
 				"<br>" +
-				'<div style = "font-size:19px;">If the number is <strong>3</strong>, do not press anything.</div>' +
+				'<div style = "font-size:19px;">If the numbers are <strong>3, 6</strong>, do not press anything.</div>' +
 				"<br>" +
-				'<div style = "font-size:19px;">If it is not numbers <strong>0, 1, 2, 4, 5, 6, 7, 8, 9</strong>, but numbers <strong>3, 6</strong> press the <strong>Space Bar</strong> as fast as you can.</div>' +
+				'<div style = "font-size:19px;">If the number iis <strong>0, 1, 2, 4, 5, 6, 7, 8, 9</strong>, press the <strong>Space Bar</strong> as fast as you can.</div>' +
 				"<br>" +
 				'<div style = "font-size:19px;"> Make sure the experiment is open in an active window, displayed in the center and you are using a computer. </div>'+
 				"<br>" +
