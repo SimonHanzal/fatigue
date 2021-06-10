@@ -1,11 +1,7 @@
 /* METADATA */
 	
 	var timeline = [];
-	var no_trials = 2;
-        function randomise() {
-  return 50 + Math.round((Math.random() * 1000)); 
-}
-
+	var no_trials = prompt("How many times to loop through the 10 digits (previous task used 13)?");
 
 /* WELCOME */
     
@@ -49,20 +45,25 @@
 	  { stimulus: '<div style="font-size:64px;">9</div>', data: { test_part: 'test', correct_response: 'Space'} }
     ];
 
-    var fixation = {
-      type: 'html-keyboard-response',
-      stimulus: "<p></p>",//'<div style="font-size:60px;">+</div>',
-      choices: jsPsych.NO_KEYS,
-      trial_duration: 15,
-      data: {test_part: 'fixation'}
-    }
+    var fixation = [ 
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 1, data: {test_part: 'fixation' } },
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 101, data: {test_part: 'fixation' } },
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 201, data: {test_part: 'fixation' } },
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 301, data: {test_part: 'fixation' } },
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 401, data: {test_part: 'fixation' } },
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 501, data: {test_part: 'fixation' } },
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 601, data: {test_part: 'fixation' } },
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 701, data: {test_part: 'fixation' } },
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 801, data: {test_part: 'fixation' } },
+	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 901, data: {test_part: 'fixation' } }  
+	    ];
 
     var test = {
       type: "html-keyboard-response",
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
 	  stimulus_duration: 250,
-	  trial_duration: randomise(), //+2735 instead of 100 in the function. Currently not working.
+	  trial_duration: 2734,
 	  response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
@@ -83,7 +84,7 @@
 
     var test_procedure = {
       timeline: [fixation, test],
-      timeline_variables: test_stimuli,
+      timeline_variables: [fixation_stimuli, test_stimuli],
       repetitions: no_trials,
 	  randomize_order: true
     }
