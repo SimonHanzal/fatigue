@@ -62,7 +62,7 @@
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
 	  stimulus_duration: 250,
-	  trial_duration: this randomise(), //+2735 
+	  trial_duration: randomise(), //+2735 instead of 100 in the function. Currently not working.
 	  response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
