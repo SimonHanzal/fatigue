@@ -60,7 +60,7 @@
       choices: ['f1','Space'],
 	  stimulus_duration: 250,
 	  on_start: function() {
-	  setTimeout(() => { stimulus: '<div style="font-size:64px;">+</div>' }, 250)
+	  setTimeout(() => { document.write('+') }, 250)
 	  },
 	  trial_duration: 2749,
 	  response_ends_trial: false,
