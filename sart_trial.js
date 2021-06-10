@@ -76,8 +76,8 @@
 		  data.go = 2;
 	       }
 	},
-      on_start: function(trial) {
-      setTimeout(() => { trial.stimulus = '<div style="font-size:64px;">+</div>' }, 30000)
+      on_load: function(trial) {
+      setTimeout(() => { document.querySelector('div').textContent = 'test' }, 3000)
       }
     }
 
