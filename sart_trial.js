@@ -1,7 +1,7 @@
 /* METADATA */
 	
 	var timeline = [];
-	var no_trials = 4;
+	var no_trials = 1;
 
 /* WELCOME */
     
@@ -58,7 +58,7 @@
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
 	  stimulus_duration: 250,
-	  trial_duration: 2735, //+ Math.round((Math.random() * 1000)),
+	  trial_duration: 2735 + Math.round((Math.random() * 1000)),
 	  response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
