@@ -47,7 +47,7 @@
 
     var fixation = {
 	 type: 'html-keyboard-response',
-	 stimulus: '<div style="font-size:64px;">+</div>',
+	 stimulus: '<div style="font-size:64px;"> </div>',
 	 choices: jsPsych.NO_KEYS,
 	 trial_duration: function() {
 	    return jsPsych.randomization.sampleWithoutReplacement([1, 101, 201, 301, 401, 501, 601, 701, 801, 901, 1001], 1)[0];
