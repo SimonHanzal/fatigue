@@ -45,19 +45,15 @@
 	  { stimulus: '<div style="font-size:64px;">9</div>', data: { test_part: 'test', correct_response: 'Space'} }
     ];
 
-    var fixation = [ 
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 1, data: {test_part: 'fixation' } },
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 101, data: {test_part: 'fixation' } },
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 201, data: {test_part: 'fixation' } },
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 301, data: {test_part: 'fixation' } },
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 401, data: {test_part: 'fixation' } },
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 501, data: {test_part: 'fixation' } },
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 601, data: {test_part: 'fixation' } },
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 701, data: {test_part: 'fixation' } },
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 801, data: {test_part: 'fixation' } },
-	{ type: 'html-keyboard-response', stimulus: '<div style="font-size:64px;">+</div>', choices: jsPsych.NO_KEYS, trial_duration: 901, data: {test_part: 'fixation' } }  
-	    ];
-
+    var fixation = {
+	 type: 'html-keyboard-response',
+	 stimulus: '<div style="font-size:64px;">+</div>',
+	 choices: jsPsych.NO_KEYS,
+	 trial_duration: function() {
+	    return jsPsych.randomization.sampleWithoutReplacement([1, 101, 201, 301, 401, 501, 601, 701, 801, 901], 1)[0];
+	  },
+	 data: {test_part: 'fixation' } }
+    
     var test = {
       type: "html-keyboard-response",
       stimulus: jsPsych.timelineVariable('stimulus'),
@@ -68,7 +64,7 @@
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
 		data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
-		data.three = data.stimulus == '<div style="font-size:64px;">3</div>' || data.stimulus == '<div style="font-size:64px;">3</div>';
+		data.three = data.stimulus == '<div style="font-size:64px;">3</div>' || data.stimulus == '<div style="font-size:64px;">6</div>';
 		if(data.correct == true){
 		  data.type = 1;
 		} else {
@@ -84,7 +80,7 @@
 
     var test_procedure = {
       timeline: [fixation, test],
-      timeline_variables: [fixation_stimuli, test_stimuli],
+      timeline_variables: test_stimuli,
       repetitions: no_trials,
 	  randomize_order: true
     }
