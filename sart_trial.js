@@ -77,8 +77,7 @@
 	       }
 	},
       on_start: function() {
-      alert('Hello');
-      //setTimeout(function () => { alert("Hello") }, 250)
+      setTimeout(function () => { alert("Hello") }, 250)
       }
     }
 
