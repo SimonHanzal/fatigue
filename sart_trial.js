@@ -76,7 +76,7 @@
 		  data.go = 2;
 	       }
 	},
-      on_load: function(trial) { 
+      on_start: function(trial) { 
       //setTimeout(() => { document.querySelector('div').textContent = '+'}, 250);
       trial.stimulus = '<div style="font-size:64px;">+</div>';     
       }
