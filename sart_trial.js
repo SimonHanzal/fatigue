@@ -58,7 +58,7 @@
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
 	  stimulus_duration: 250,
-	  trial_duration: 2735 + Math.round((Math.random() * 10000)),
+	  trial_duration: Math.round((Math.random() * 1000)), //+2735 
 	  response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
