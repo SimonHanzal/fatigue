@@ -47,7 +47,7 @@
 
     var fixation = {
 	 type: 'html-keyboard-response',
-	 stimulus: '<div style="font-size:64px;"> </div>',
+	 stimulus: '<div style="font-size:64px;">+</div>',
 	 choices: jsPsych.NO_KEYS,
 	 trial_duration: function() {
 	    return jsPsych.randomization.sampleWithoutReplacement([1, 101, 201, 301, 401, 501, 601, 701, 801, 901, 1001], 1)[0];
@@ -59,6 +59,9 @@
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
 	  stimulus_duration: 250,
+	  on_start: function() {
+	  setTimeout(() => { print('<div style="font-size:64px;">+</div>') }, 250)
+	  },
 	  trial_duration: 2749,
 	  response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
