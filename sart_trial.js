@@ -100,7 +100,7 @@
 		var correct_no_go_p = correct_relevant.count();
 		var incorrect_no_go_p = no_trials * 2 - correct_relevant.count();
 		var correct_go_p = correct_trials.count() - correct_no_go_p;
-		var incorrect_go_p = no_trials * 4 - correct_go_p;
+		var incorrect_go_p = no_trials * 8 - correct_go_p;
 		
 		/* ANALYTIC CALCULATIONS */
 		
