@@ -58,12 +58,12 @@
       type: "html-keyboard-response",
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
-	  stimulus_duration: 250,
-	  on_start: function() {
-	  setTimeout(() => { alert("Hello") }, 250)
-	  },
-	  trial_duration: 2749,
-	  response_ends_trial: false,
+      stimulus_duration: 250,
+      on_start: function() {
+      setTimeout(function () => { alert("Hello") }, 250)
+      },
+      trial_duration: 2749,
+      response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
 		data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
