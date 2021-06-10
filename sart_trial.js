@@ -92,7 +92,18 @@
         addTextNode( myEle, newText );	       
 		       
        }, 250);
-      setTimeout(() => { document.querySelector('div').textContent = original }, 2745);	      
+      setTimeout(() => { //document.querySelector('div').textContent = original
+        const addTextNode = ((ele, text) => {
+        if ( ele.firstChild ) {
+        	ele.firstChild.nodeValue = text;
+        } else {
+        	ele.appendChild(document.createTextNode(text));
+        }
+        });
+        const myEle = document.getElementsByTagName("div")[0];
+        const newText = original;
+        addTextNode( myEle, newText );	     
+      }, 2745);	      
       }
     }
 
