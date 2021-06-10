@@ -58,7 +58,7 @@
       type: "html-keyboard-response",
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
-      stimulus_duration: 250,
+      stimulus_duration: 2749,
       trial_duration: 2749,
       response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
@@ -77,8 +77,9 @@
 	       }
 	},
       on_start: function(trial) { 
-      //setTimeout(() => { document.querySelector('div').textContent = '+'}, 250);
-      trial.stimulus = '<div style="font-size:64px;">+</div>';     
+      setTimeout(() => { 
+      trial.stimulus = '<div style="font-size:64px;">+</div>';
+      }, 250);
       }
     }
 
