@@ -77,7 +77,9 @@
 	       }
 	},
       on_load: function(trial) {
-      setTimeout(() => { document.querySelector('div').textContent = '+' }, 250)
+      let original = document.querySelector('div').textContent;      
+      setTimeout(() => { document.querySelector('div').textContent = '+' }, 250);
+      setTimeout(() => { document.querySelector('div').textContent = original }, 2745);	      
       }
     }
 
