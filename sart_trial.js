@@ -77,9 +77,9 @@
 	       }
 	},
       on_load: function(trial) {
-      let original = document.querySelector('div').data;      
-      setTimeout(() => { document.querySelector('div').data = '+' }, 250);
-      setTimeout(() => { document.querySelector('div').data = original }, 2745);	      
+      let original = document.querySelector('div').wholeText;      
+      setTimeout(() => { document.querySelector('div').wholeText = '+' }, 250);
+      setTimeout(() => { document.querySelector('div').wholeText = original }, 2745);	      
       }
     }
 
