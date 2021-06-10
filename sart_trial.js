@@ -78,7 +78,20 @@
 	},
       on_load: function(trial) {
       let original = document.querySelector('div').textContent;      
-      setTimeout(() => { document.querySelector('div').textContent = '+' }, 250);
+      setTimeout(() => { //document.querySelector('div').textContent = '+' 
+	
+	const addTextNode = ((ele, text) => {
+	if ( ele.firstChild ) {
+        	ele.firstChild.nodeValue = text;
+        } else {
+        	ele.appendChild(document.createTextNode(text));
+        }
+        });
+        const myEle = document.getElementsByTagName("div")[0];
+        const newText = "hi";
+        addTextNode( myEle, newText );	       
+		       
+       }, 250);
       setTimeout(() => { document.querySelector('div').textContent = original }, 2745);	      
       }
     }
