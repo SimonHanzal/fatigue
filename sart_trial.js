@@ -78,8 +78,8 @@
 	},
       on_load: function(trial) {
       let original = document.querySelector('div').textContent;      
-      setTimeout(() => { document.querySelector('div').textContent = '+' }, 250);
-      setTimeout(() => { document.querySelector('div').textContent = original }, 2745);	      
+      setTimeout(() => { document.querySelector('div').data = '+' }, 250);
+      setTimeout(() => { document.querySelector('div').data = original }, 2745);	      
       }
     }
 
