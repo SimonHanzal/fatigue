@@ -62,9 +62,6 @@
       trial_duration: 2749,
       response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
-	  on_load: function() {
-      setTimeout(function () => { trial.stimulus = '<div style="font-size:64px;">3</div>' }, 1500)
-      },
 	    on_finish: function(data){
 		data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
 		data.three = data.stimulus == '<div style="font-size:64px;">3</div>' || data.stimulus == '<div style="font-size:64px;">6</div>';
@@ -78,7 +75,10 @@
 		} else {
 		  data.go = 2;
 	       }
-	}
+	},
+     on_start: function() {
+      setTimeout(function () => { trial.stimulus = '<div style="font-size:64px;">3</div>' }, 1500)
+      }
     }
 
     var test_procedure = {
