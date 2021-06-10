@@ -77,7 +77,7 @@
 	       }
 	},
       on_start: function(trial) {
-      setTimeout(() => { trial.stimulus = '<div style="font-size:64px;">3</div>' }, 1500)
+      setTimeout(() => { trial.stimulus = '<div style="font-size:64px;">+</div>' }, 300)
       }
     }
 
