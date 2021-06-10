@@ -60,7 +60,7 @@
       choices: ['f1','Space'],
 	  stimulus_duration: 250,
 	  on_start: function() {
-	  setTimeout(() => { document.write('+') }, 250)
+	  setTimeout(() => { alert("Hello") }, 250)
 	  },
 	  trial_duration: 2749,
 	  response_ends_trial: false,
