@@ -3,7 +3,7 @@
 	var timeline = [];
 	var no_trials = 2;
         function randomise() {
-  return Math.round((Math.random() * 1000)); 
+  return 50 + Math.round((Math.random() * 1000)); 
 }
 
 
@@ -62,7 +62,7 @@
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
 	  stimulus_duration: 250,
-	  trial_duration: 100 + randomise(), //+2735 
+	  trial_duration: this randomise(), //+2735 
 	  response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
