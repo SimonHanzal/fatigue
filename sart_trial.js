@@ -59,7 +59,7 @@
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
       stimulus_duration: 250,
-      on_start: function() {
+      on_load: function() {
       setTimeout(function () => { alert("Hello") }, 250)
       },
       trial_duration: 2749,
