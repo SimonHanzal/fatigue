@@ -158,7 +158,7 @@
 					"<br>" +
 					'<div style = "font-size:19px;"> <b> To receive a payment you must consistently show at least some correct responses to all of the numbers. </b> </div>'+
 					"<br>" +
-					'<div style = "font-size:19px;">Now, press any key to continue to the recorded part of the experiment.</div>';
+					'<div style = "font-size:19px;">Press any key to see detailed summary of all trials.</div>';
 		}
 	};
 	timeline.push(debrief_block);
