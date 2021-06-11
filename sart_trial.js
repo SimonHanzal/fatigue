@@ -1,13 +1,13 @@
 /* METADATA */
 	
 	var timeline = [];
-	var no_trials = prompt("How many times to loop through the 10 digits (to compare with standard SART, the number is 23)?");
+	var no_trials = prompt("How many times to loop through the 10 digits? Note: to compare with standard SART, the number would be 23.");
 
 /* WELCOME */
     
 	var welcome = {
       type: "html-keyboard-response",
-      stimulus: '<div style = "font-size:22px;">This is an experimental version of the SART task with a 20/80 no-go/go rate and 3000ms to 4000ms trial length.</div>'
+      stimulus: '<div style = "font-size:22px;">This is an experimental version of the SART task with a 20%/80% no-go/go rate and 3000ms - 4000ms trial length.</div>'
     };
     timeline.push(welcome);
 
@@ -19,13 +19,17 @@
 				"<br>" +
 				'<div style = "font-size:19px;">If the numbers are <strong>3, 6</strong>, do not press anything.</div>' +
 				"<br>" +
-				'<div style = "font-size:19px;">If the number iis <strong>0, 1, 2, 4, 5, 6, 7, 8, 9</strong>, press the <strong>Space Bar</strong> as fast as you can.</div>' +
+				'<div style = "font-size:19px;">If the number is <strong>0, 1, 2, 4, 5, 6, 7, 8, 9</strong>, press the <strong>Space Bar</strong> as fast as you can.</div>' +
 				"<br>" +
 				'<div style = "font-size:19px;"> Make sure the experiment is open in an active window, displayed in the center and you are using a computer. </div>'+
 				"<br>" +
+				'<div style = "font-size:19px;"> If desired, you can go fullscreen by pressing f11.</div>'+
+				"<br>" +
 				'<div style = "font-size:19px;">Please, also ensure your keyboard is connected to the computer and that there are no distractions around you.</div>' +
-				"<br>" +	
-				'<div style = "font-size:19px;">Press any key to begin the trial session.</div>',
+				"<br>" +
+				'<div style = "font-size:19px;">There is feedback at the end.</div>' +
+				"<br>" +
+				'<div style = "font-size:19px;">Press any key to begin the session.</div>',
       post_trial_gap: 2000
     };
     timeline.push(instructions);
@@ -160,7 +164,7 @@
 					"<br>" +
 					'<div style = "font-size:19px;"> Your accuracy when you were supposed to press the spacebar was '+accuracy_go+'% and when you were supposed not to press anything was '+accuracy_nogo+'%. </div>'+
 					"<br>" +
-					'<div style = "font-size:19px;"> <b> To receive a payment you must consistently show at least some correct responses to all of the numbers. </b> </div>'+
+					'<div style = "font-size:19px;"> <b> Sadly, the research team does not receive any extra payment. </b> </div>'+
 					"<br>" +
 					'<div style = "font-size:19px;">Now, press any key to continue to the recorded part of the experiment.</div>';
 		}
