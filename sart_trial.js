@@ -1,13 +1,13 @@
 /* METADATA */
 	
 	var timeline = [];
-	var no_trials = prompt("How many times to loop through the 10 digits (previous task used 13)?");
+	var no_trials = prompt("How many times to loop through the 10 digits (to compare with standard SART, the number is 23)?");
 
 /* WELCOME */
     
 	var welcome = {
       type: "html-keyboard-response",
-      stimulus: '<div style = "font-size:22px;">You are now going to start a trial session for the experiment. Click this text, then press any key to begin.</div>'
+      stimulus: '<div style = "font-size:22px;">This is an experimental version of the SART task with a 20/80 no-go/go rate and 3000ms to 4000ms trial length.</div>'
     };
     timeline.push(welcome);
 
@@ -47,7 +47,7 @@
 
     var fixation = {
 	 type: 'html-keyboard-response',
-	 stimulus: '<div style="font-size:64px;">+</div>',
+	 stimulus: '<div style="font-size:64px;"></div>',
 	 choices: jsPsych.NO_KEYS,
 	 trial_duration: function() {
 	    return jsPsych.randomization.sampleWithoutReplacement([1, 101, 201, 301, 401, 501, 601, 701, 801, 901, 1001], 1)[0];
@@ -58,7 +58,7 @@
       type: "html-keyboard-response",
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
-      stimulus_duration: 2749,
+      stimulus_duration: 250,
       trial_duration: 2749,
       response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
@@ -75,10 +75,10 @@
 		} else {
 		  data.go = 2;
 	       }
-	},
-      on_start: function(trial) { 
-      setTimeout ( () => {trial.stimulus = '<div style="font-size:64px;">+</div>'}, 250 );
-      }
+	}//,
+      //on_start: function(trial) { 
+      //setTimeout ( () => {trial.stimulus = '<div style="font-size:64px;">+</div>'}, 250 );
+      //}
     }
 
     var test_procedure = {
