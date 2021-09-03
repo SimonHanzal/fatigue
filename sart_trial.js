@@ -37,7 +37,7 @@
 /* TRIALS */
 	
 	var test_stimuli = [
-	  { stimulus: '<img src="Number_0_Font_72.bmp" width="500" height="600">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_0_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
 	  { stimulus: '<div style="font-size:64px;">1</div>', data: { test_part: 'test', correct_response: 'Space'} },
 	  { stimulus: '<div style="font-size:64px;">2</div>', data: { test_part: 'test', correct_response: 'Space'} },
 	  { stimulus: '<div style="font-size:64px;">3</div>', data: { test_part: 'test', correct_response: 'None'}  },
