@@ -79,10 +79,10 @@
 		} else {
 		  data.go = 2;
 	       }
-	}//,
-      //on_start: function(trial) { 
-      //setTimeout ( () => {trial.stimulus = '<div style="font-size:64px;">+</div>'}, 250 );
-      //}
+	},
+      on_start: function(trial) { 
+      setTimeout ( () => {trial.stimulus = '<img src="fixation_72.bmp">'}, 250 );
+      }
     }
 
     var test_procedure = {
