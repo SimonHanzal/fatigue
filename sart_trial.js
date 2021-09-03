@@ -38,14 +38,14 @@
 	
 	var test_stimuli = [
 	  { stimulus: '<img src="Number_0_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<div style="font-size:64px;">1</div>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<div style="font-size:64px;">2</div>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<div style="font-size:64px;">3</div>', data: { test_part: 'test', correct_response: 'None'}  },
-	  { stimulus: '<div style="font-size:64px;">4</div>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<div style="font-size:64px;">5</div>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<div style="font-size:64px;">6</div>', data: { test_part: 'test', correct_response: 'None'}  },
-	  { stimulus: '<div style="font-size:64px;">7</div>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<div style="font-size:64px;">8</div>', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'None'}  },
+	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'None'}  },
+	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
 	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} }
     ];
 
