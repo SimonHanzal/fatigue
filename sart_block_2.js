@@ -26,21 +26,21 @@
 /* TRIALS */
 	
 	var test_stimuli = [
-	  { stimulus: '<img src="Number_0_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_1_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_2_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_3_Font_72.bmp">', data: { test_part: 'test', correct_response: 'None'}  },
-	  { stimulus: '<img src="Number_4_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_5_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_6_Font_72.bmp">', data: { test_part: 'test', correct_response: 'None'}  },
-	  { stimulus: '<img src="Number_7_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_8_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} }
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 0</p>', data: { test_part: 'test', correct_response: 'Space'} },
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 1</p>', data: { test_part: 'test', correct_response: 'Space'} },
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 2</p>', data: { test_part: 'test', correct_response: 'Space'} },
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 3</p>', data: { test_part: 'test', correct_response: 'None'}  },
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 4</p>', data: { test_part: 'test', correct_response: 'Space'} },
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 5</p>', data: { test_part: 'test', correct_response: 'Space'} },
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 6</p>', data: { test_part: 'test', correct_response: 'None'}  },
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 7</p>', data: { test_part: 'test', correct_response: 'Space'} },
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 8</p>', data: { test_part: 'test', correct_response: 'Space'} },
+		{ stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 9</p>', data: { test_part: 'test', correct_response: 'Space'} }
     ];
 
     var fixation = {
 	 type: 'html-keyboard-response',
-	 stimulus: '<img src="fixation_72.bmp">',
+	 stimulus: '<p></p>',
 	 choices: jsPsych.NO_KEYS,
 	 trial_duration: function() {
 	    return jsPsych.randomization.sampleWithoutReplacement([1, 101, 201, 301, 401, 501, 601, 701, 801, 901, 1001], 1)[0];
@@ -57,13 +57,13 @@
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
 		data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
-		data.three = data.stimulus == '<img src="Number_3_Font_72.bmp">' || data.stimulus == '<img src="Number_6_Font_72.bmp">';
+		data.three = data.stimulus == '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 3</p>' || data.stimulus == '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 6</p>';
 		if(data.correct == true){
 			data.type = 1;
 		} else {
 			data.type = 0;
 			};
-		if(data.stimulus == '<img src="Number_3_Font_72.bmp">' || data.stimulus == '<img src="Number_6_Font_72.bmp">'){
+		if(data.stimulus == '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 3</p>' || data.stimulus == '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 6</p>'){
 			data.go = 3;
 		} else {
 			data.go = 2;
