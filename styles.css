@@ -1,0 +1,11 @@
+ body {
+ background-image: url("fixation_72.bmp");
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: 50% 49.7%;
+} 
+
+.gap-stimulus {
+    background-image: none;
+    background-color: white;
+   }

@@ -1,51 +1,40 @@
 /* METADATA */
-	
 	var timeline = [];
+
 	var no_trials = prompt("How many times to loop through the 10 digits? Only enter natural numbers. Note: to compare with standard SART, the number would be 23.");
 
 /* WELCOME */
     
-	var welcome = {
-      type: "html-keyboard-response",
-      stimulus: '<div style = "font-size:22px;">This is an experimental version of the SART task with a 20%/80% no-go/go rate and 3000ms - 4000ms trial length.</div>'
-    };
-    timeline.push(welcome);
-
 /* INSTRUCTIONS */
-    
+	timeline.push({
+		type: 'fullscreen',
+		fullscreen_mode: true,
+		message: 	'<img src="blank.bmp">' +
+					'<p> The experiment will now switch to full screen mode, please press the button below:</p>',
+		post_trial_gap: 20
+	});
+
 	var instructions = {
       type: "html-keyboard-response",
-      stimulus: '<div style = "font-size:22px;"><strong>Instructions:</strong></div>' +
-				"<br>" +
-				'<div style = "font-size:19px;">If the numbers are <strong>3, 6</strong>, do not press anything.</div>' +
-				"<br>" +
-				'<div style = "font-size:19px;">If the number is <strong>0, 1, 2, 4, 5, 6, 7, 8, 9</strong>, press the <strong>Space Bar</strong> as fast as you can.</div>' +
-				"<br>" +
-				'<div style = "font-size:19px;"> Make sure the experiment is open in an active window, displayed in the center and you are using a computer. </div>'+
-				"<br>" +
-				'<div style = "font-size:19px;"> If desired, you can go fullscreen by pressing f11.</div>'+
-				"<br>" +
-				'<div style = "font-size:19px;">Please, also ensure your keyboard is connected to the computer and that there are no distractions around you.</div>' +
-				"<br>" +
-				'<div style = "font-size:19px;">There is feedback at the end.</div>' +
-				"<br>" +
-				'<div style = "font-size:19px;">Press any key to begin the session.</div>',
-      post_trial_gap: 2000
+      stimulus: '<img src="instructions.bmp">',
+      post_trial_gap: 2000,
+	  css_classes: ['gap-stimulus']
     };
-    timeline.push(instructions);
+    
+	timeline.push(instructions);
 
 /* TRIALS */
 	
 	var test_stimuli = [
 	  { stimulus: '<img src="Number_0_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'None'}  },
-	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'None'}  },
-	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_1_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_2_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_3_Font_72.bmp">', data: { test_part: 'test', correct_response: 'None'}  },
+	  { stimulus: '<img src="Number_4_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_5_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_6_Font_72.bmp">', data: { test_part: 'test', correct_response: 'None'}  },
+	  { stimulus: '<img src="Number_7_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<img src="Number_8_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} },
 	  { stimulus: '<img src="Number_9_Font_72.bmp">', data: { test_part: 'test', correct_response: 'Space'} }
     ];
 
@@ -66,23 +55,20 @@
       trial_duration: 2749,
       response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
-	    on_finish: function(data){
+	  on_finish: function(data){
 		data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
-		data.three = data.stimulus == '<div style="font-size:64px;">3</div>' || data.stimulus == '<div style="font-size:64px;">6</div>';
+		data.three = data.stimulus == '<img src="Number_3_Font_72.bmp">' || data.stimulus == '<img src="Number_6_Font_72.bmp">';
 		if(data.correct == true){
-		  data.type = 1;
+			data.type = 1;
 		} else {
-		  data.type = 0;
-	       };
-		if(data.stimulus == '<div style="font-size:64px;">3</div>' || data.stimulus == '<div style="font-size:64px;">6</div>'){
-		  data.go = 3;
+			data.type = 0;
+			};
+		if(data.stimulus == '<img src="Number_3_Font_72.bmp">' || data.stimulus == '<img src="Number_6_Font_72.bmp">'){
+			data.go = 3;
 		} else {
-		  data.go = 2;
-	       }
-	},
-      on_start: function(trial) { 
-      setTimeout ( () => {trial.stimulus = '<img src="fixation_72.bmp">'}, 250 );
-      }
+			data.go = 2;
+			}
+	}
     }
 
     var test_procedure = {
@@ -109,7 +95,7 @@
 		var incorrect_no_go_p = no_trials * 2 - correct_relevant.count();
 		var correct_go_p = correct_trials.count() - correct_no_go_p;
 		var incorrect_go_p = no_trials * 8 - correct_go_p;
-		
+
 		/* ANALYTIC CALCULATIONS */
 		
 		var accuracy_p = Math.round(correct_trials.count() / trials.count() * 10000) / 100;
@@ -156,17 +142,21 @@
 		var sd4 = Math.sqrt(sd3);
 		var deviation_p = Math.round(sd4*100)/100;
 			
-			return  '<div style = "font-size:22px;">Congratulations, you have finished the trial session!</div>'+
+			return  '<img src="blank.bmp">' +
+					'<div style = "font-size:22px;">Congratulations, you have finished the experimental part!</div>'+
 					"<br>" +
-					'<div style = "font-size:19px;">Please, check if you got the expected responses:</div>'+
-					"<br>" +
-					'<div style = "font-size:19px;">You missed '+incorrect_go_p+' of the numbers (0, 1, 2, 4, 5, 7, 8, 9) and incorrectly reacted  '+incorrect_no_go_p+'x  to numbers 3 and 6.</div>'+
-					"<br>" +
-					'<div style = "font-size:19px;"> Your accuracy when you were supposed to press the spacebar was '+accuracy_go+'% and when you were supposed not to press anything was '+accuracy_nogo+'%. </div>'+
-					"<br>" +
-					'<div style = "font-size:19px;"> <b> Sadly, the research team does not receive any extra payment. </b> </div>'+
-					"<br>" +
-					'<div style = "font-size:19px;">Now, press any key to continue to the recorded part of the experiment.</div>';
+			   		'<div style = "font-size:19px;">Press any key to continue.</div>';;
 		}
 	};
+	
+	timeline.push({
+		type: 'fullscreen',
+		fullscreen_mode: false
+	  });
+	
 	timeline.push(debrief_block);
+
+	timeline.push({
+		type: 'fullscreen',
+		fullscreen_mode: false
+	});	
