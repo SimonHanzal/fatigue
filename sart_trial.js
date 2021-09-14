@@ -43,7 +43,7 @@
 	 stimulus: '<p></p>',
 	 choices: jsPsych.NO_KEYS,
 	 trial_duration: function() {
-	    return jsPsych.randomization.sampleWithoutReplacement([1, 101, 201, 301, 401, 501, 601, 701, 801, 901, 1001], 1)[0];
+	    return jsPsych.randomization.sampleWithoutReplacement([1, 334, 667, 1001], 1)[0];
 	  },
 	 data: {test_part: 'fixation' } }
     
