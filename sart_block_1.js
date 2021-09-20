@@ -9,14 +9,14 @@
 	timeline.push({
 		type: 'fullscreen',
 		fullscreen_mode: true,
-		message: 	'<img src="blank.bmp">' +
+		message: 	'<img src="https://simonhanzal.github.io/fatigue/blank.bmp">' +
 					'<p> The experiment will now switch to full screen mode, please press the button below:</p>',
 		post_trial_gap: 100
 	});
 
 	var instructions = {
       type: "html-keyboard-response",
-      stimulus: '<img src="instructions1.bmp">',
+      stimulus: '<img src="https://simonhanzal.github.io/fatigue/instructions1.bmp">',
       post_trial_gap: 2000,
 	  css_classes: ['gap-stimulus']
     };
@@ -142,7 +142,7 @@
 		var sd4 = Math.sqrt(sd3);
 		var deviation_p = Math.round(sd4*100)/100;
 			
-			return  '<img src="blank.bmp">' +
+			return  '<img src="https://simonhanzal.github.io/fatigue/blank.bmp">' +
 					'<div style = "font-size:19px;">Great job! Take a short break.</div>' +
 					'<div style = "font-size:19px;">When ready, press any key to continue.</div>';
 		}
