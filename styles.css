@@ -9,3 +9,10 @@
     background-image: none;
     background-color: white;
    }
+
+.jspsych-content-wrapper {
+ background-image: url("https://simonhanzal.github.io/fatigue/fixation_72.bmp");
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: 50.1% 49.5%;
+}
