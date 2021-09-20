@@ -9,17 +9,3 @@
     background-image: none;
     background-color: white;
    }
-
-#display_stage_background {
- background-image: url("https://simonhanzal.github.io/fatigue/fixation_72.bmp");
- background-repeat: no-repeat;
- background-attachment: fixed;
- background-position: 50.1% 49.5%;
-    }
-
-    #display_stage {
- background-image: url("https://simonhanzal.github.io/fatigue/fixation_72.bmp");
- background-repeat: no-repeat;
- background-attachment: fixed;
- background-position: 50.1% 49.5%;
-    }
