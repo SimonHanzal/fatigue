@@ -153,14 +153,14 @@
 		}
 	};
 	
-	timeline.push({
+	/*timeline.push({
 		type: 'fullscreen',
 		fullscreen_mode: false
 	  });
 	
 	timeline.push(debrief_block);
 
-	/*timeline.push({
+	timeline.push({
 		type: 'fullscreen',
 		fullscreen_mode: false
 	});	*/
