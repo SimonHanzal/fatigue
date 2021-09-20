@@ -17,14 +17,14 @@
  background-position: 50.1% 49.5%;
 }
 
-.display-stage {
+#display-stage {
  background-image: url("https://simonhanzal.github.io/fatigue/fixation_72.bmp");
  background-repeat: no-repeat;
  background-attachment: fixed;
  background-position: 50.1% 49.5%;
 }
 
-.display-stage-background {
+#display-stage-background {
  background-image: url("https://simonhanzal.github.io/fatigue/fixation_72.bmp");
  background-repeat: no-repeat;
  background-attachment: fixed;
