@@ -26,7 +26,7 @@
 /* TRIALS */
 	
 	var test_stimuli = [
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 0</p>', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus:  '<img src="https://simonhanzal.github.io/fatigue/instructions.bmp"><br><p style="font-size:64px;"></p><br><p style="font-size:64px;"> 0</p>', data: { test_part: 'test', correct_response: 'Space'} },
 	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 1</p>', data: { test_part: 'test', correct_response: 'Space'} },
 	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 2</p>', data: { test_part: 'test', correct_response: 'Space'} },
 	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 3</p>', data: { test_part: 'test', correct_response: 'None'}  },
