@@ -26,16 +26,16 @@
 /* TRIALS */
 	
 	var test_stimuli = [
-	  { stimulus:  '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 0</p>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 1</p>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 2</p>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 3</p>', data: { test_part: 'test', correct_response: 'None'}  },
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 4</p>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 5</p>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 6</p>', data: { test_part: 'test', correct_response: 'None'}  },
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 7</p>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 8</p>', data: { test_part: 'test', correct_response: 'Space'} },
-	  { stimulus: '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 9</p>', data: { test_part: 'test', correct_response: 'Space'} }
+	  { stimulus:  '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 0</p>', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 1</p>', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 2</p>', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 3</p>', data: { test_part: 'test', correct_response: 'None'}  },
+	  { stimulus: '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 4</p>', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 5</p>', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 6</p>', data: { test_part: 'test', correct_response: 'None'}  },
+	  { stimulus: '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 7</p>', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 8</p>', data: { test_part: 'test', correct_response: 'Space'} },
+	  { stimulus: '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 9</p>', data: { test_part: 'test', correct_response: 'Space'} }
     ];
 
     var fixation = {
@@ -57,13 +57,13 @@
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
 		data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
-		data.three = data.stimulus == '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 3</p>' || data.stimulus == '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 6</p>';
+		data.three = data.stimulus == '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 3</p>' || data.stimulus == '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 6</p>';
 		if(data.correct == true){
 			data.type = 1;
 		} else {
 			data.type = 0;
 			};
-		if(data.stimulus == '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 3</p>' || data.stimulus == '<p style="font-size:64px;"></p><br><p style="font-size:64px;"> 6</p>'){
+		if(data.stimulus == '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 3</p>' || data.stimulus == '<p style="font-size:64px;"></p><br><br><p style="font-size:64px;"> 6</p>'){
 			data.go = 3;
 		} else {
 			data.go = 2;
