@@ -9,14 +9,14 @@
 	timeline.push({
 		type: 'fullscreen',
 		fullscreen_mode: true,
-		message: 	'<img src="blank.bmp">' +
+		message: 	'<img src="https://simonhanzal.github.io/fatigue/blank.bmp">' +
 					'<p> The experiment will now switch to full screen mode, please press the button below:</p>',
 		post_trial_gap: 20
 	});
 
 	var instructions = {
       type: "html-keyboard-response",
-      stimulus: '<img src="instructions.bmp">',
+      stimulus: '<img src="https://simonhanzal.github.io/fatigue/instructions.bmp">',
       post_trial_gap: 2000,
 	  css_classes: ['gap-stimulus']
     };
@@ -142,7 +142,7 @@
 		var sd4 = Math.sqrt(sd3);
 		var deviation_p = Math.round(sd4*100)/100;
 			
-			return  '<img src="blank.bmp">' +
+			return  '<img src="https://simonhanzal.github.io/fatigue/blank.bmp">' +
 			'<div style = "font-size:22px;">Congratulations, you have finished the trial session!</div>'+
 			'<div style = "font-size:19px;">Please, check if you got the expected responses:</div>'+
 			'<div style = "font-size:19px;">You missed '+incorrect_go_p+' of the numbers (0, 1, 2, 4, 5, 7, 8, 9) and incorrectly reacted  '+incorrect_no_go_p+'x  to numbers 3 and 6.</div>'+
