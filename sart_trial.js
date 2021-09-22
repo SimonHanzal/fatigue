@@ -3,7 +3,7 @@
 
 	/* var no_trials = prompt("How many times to loop through the 10 digits? Only enter natural numbers. Note: to compare with standard SART, the number would be 23.");
  */
-var no_trials = 3;
+var no_trials = 1;
 
 /* WELCOME */
     
