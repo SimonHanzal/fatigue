@@ -2,7 +2,7 @@
 	var timeline = [];
 
 	/* var no_trials = 13;*/
-	var no_trials = 3;
+	var no_trials = 1;
 /* WELCOME */
     
 /* INSTRUCTIONS */
