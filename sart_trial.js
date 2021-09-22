@@ -81,6 +81,15 @@ var no_trials = 1;
     }
 	timeline.push(test_procedure);
 	
+   var finished = {
+      type: "html-keyboard-response",
+      stimulus: '<div style = "font-size:22px;">Congratulations, you have finished the trial session! Press any key to display the results</div>'+,
+      post_trial_gap: 2000,
+	  css_classes: ['gap-stimulus']
+    };
+    
+	timeline.push(finished);
+	
 	var debrief_block = {
 	    type: "html-keyboard-response",
 	    stimulus: function() {
