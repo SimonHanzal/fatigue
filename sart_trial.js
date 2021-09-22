@@ -83,7 +83,7 @@ var no_trials = 1;
 	
    var finished = {
       type: "html-keyboard-response",
-      stimulus: '<div style = "font-size:22px;">Congratulations, you have finished the trial session! Press any key to display the results</div>'+,
+      stimulus: '<div style = "font-size:22px;">Congratulations, you have finished the trial session! Press any key to display the results</div>',
       post_trial_gap: 2000,
 	  css_classes: ['gap-stimulus']
     };
