@@ -7,13 +7,13 @@
 /* WELCOME */
     
 /* INSTRUCTIONS */
-	timeline.push({
+/*	timeline.push({
 		type: 'fullscreen',
 		fullscreen_mode: true,
 		message: 	'<img src="https://simonhanzal.github.io/fatigue/blank.bmp">' +
 					'<p> The experiment will now switch to full screen mode, please press the button below:</p>',
 		post_trial_gap: 100
-	});
+	});*/
 
 	var instructions = {
       type: "html-keyboard-response",
