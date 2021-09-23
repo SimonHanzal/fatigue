@@ -83,7 +83,7 @@ var no_trials = 1;
 	
    var finished = {
       type: "html-keyboard-response",
-      stimulus: '<img src="https://simonhanzal.github.io/fatigue/blank.bmp"><div style = "font-size:22px;">Congratulations, you have finished the trial session! Press any key to display the results</div>',
+      stimulus: '<img src="https://simonhanzal.github.io/fatigue/blank.bmp"><div style = "font-size:22px;">Congratulations, you have finished the trial session! Press any key to display the results.</div>',
       post_trial_gap: 2000,
 	  css_classes: ['gap-stimulus']
     };
@@ -158,9 +158,7 @@ var no_trials = 1;
 			'<div style = "font-size:19px;">Please, check if you got the expected responses:</div>'+
 			'<div style = "font-size:19px;">You missed '+incorrect_go_p+' of the numbers (0, 1, 2, 4, 5, 7, 8, 9) and incorrectly reacted  '+incorrect_no_go_p+'x  to numbers 3 and 6.</div>'+
 			'<div style = "font-size:19px;"> Your accuracy when you were supposed to press the spacebar was '+accuracy_go+'% and when you were supposed not to press anything was '+accuracy_nogo+'%. </div>'+
-			'<div style = "font-size:19px;"> <b> Sadly, the research team does not receive any extra payment. </b> </div>'+
-			"<br>" +
-			'<div style = "font-size:19px;">Now, press any key to finish.</div>';
+			'<div style = "font-size:19px;">Now, press any key to continue.</div>';
 		}
 	};
 	timeline.push(debrief_block);
