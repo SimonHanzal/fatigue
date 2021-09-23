@@ -83,7 +83,7 @@ var no_trials = 1;
 	
    var finished = {
       type: "html-keyboard-response",
-      stimulus: '<div style = "font-size:22px;">Congratulations, you have finished the trial session! Press any key to display the results</div>',
+      stimulus: '<img src="https://simonhanzal.github.io/fatigue/blank.bmp"><div style = "font-size:22px;">Congratulations, you have finished the trial session! Press any key to display the results</div>',
       post_trial_gap: 2000,
 	  css_classes: ['gap-stimulus']
     };
@@ -163,13 +163,13 @@ var no_trials = 1;
 			'<div style = "font-size:19px;">Now, press any key to finish.</div>';
 		}
 	};
-	
+	timeline.push(debrief_block);
 	/*timeline.push({
 		type: 'fullscreen',
 		fullscreen_mode: false
 	  });
 	
-	timeline.push(debrief_block);
+	
 
 	timeline.push({
 		type: 'fullscreen',
