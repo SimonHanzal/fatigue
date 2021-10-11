@@ -18,7 +18,7 @@ var no_trials = 4;
 
 	var instructions = {
       type: "html-keyboard-response",
-      stimulus: '<img src="https://simonhanzal.github.io/fatigue/instructions.bmp">',
+      stimulus: '<img src="https://simonhanzal.github.io/fatigue/Instructions.png">',
       post_trial_gap: 2000,
 	  css_classes: ['gap-stimulus']
     };
