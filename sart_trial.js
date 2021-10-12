@@ -53,7 +53,7 @@ var no_trials = 4;
       type: "html-keyboard-response",
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
-      stimulus_duration: 250,
+      stimulus_duration: 150,
       trial_duration: 2749,
       response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
