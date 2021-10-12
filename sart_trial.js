@@ -54,7 +54,7 @@ var no_trials = 4;
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
       stimulus_duration: 150,
-      trial_duration: 2749,
+      trial_duration: 2849,
       response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
