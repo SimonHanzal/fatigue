@@ -43,7 +43,7 @@
 	 stimulus: '<p></p>',
 	 choices: jsPsych.NO_KEYS,
 	 trial_duration: function() {
-	    return jsPsych.randomization.sampleWithoutReplacement([1, 334, 667, 1001], 1)[0];
+	    return jsPsych.randomization.sampleWithoutReplacement([1, 501, 1001], 1)[0];
 	  },
 	 data: {test_part: 'fixation' } }
     
@@ -51,8 +51,8 @@
       type: "html-keyboard-response",
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f1','Space'],
-      stimulus_duration: 150,
-      trial_duration: 2849,
+      stimulus_duration: 250,
+      trial_duration: 2749,
       response_ends_trial: false,
       data: jsPsych.timelineVariable('data'),
 	  on_finish: function(data){
